@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101216">
+<title>LaunchRiot | One place for your inbox, calendar and approvals</title>
+<meta name="description" content="LaunchRiot gives busy executives one workspace for priority email, calendar and drafted replies. Nothing is ever sent without your approval.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+:root{--bg:#101216;--bg2:#171a20;--card:#1c2027;--line:#2a2f38;--cream:#f3f2ec;--mute:#b4b8bf;--mint:#83e7bb;--gold:#f2c879}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--cream);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--mint)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--mint);color:#101216;padding:8px 14px;border-radius:8px;z-index:9}
+.skip:focus{left:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(16,18,22,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+header img{height:36px;width:auto;display:block}
+nav a{color:var(--mute);text-decoration:none;margin-left:20px;font-size:15px}
+nav a:hover{color:var(--cream)}
+@media(max-width:640px){nav .hide-s{display:none}}
+.btn{display:inline-block;background:var(--mint);color:#101216;font-weight:700;text-decoration:none;padding:14px 26px;border-radius:12px;font-size:17px;min-height:48px}
+.btn:hover{filter:brightness(1.08)}
+.link2{color:var(--cream);margin-left:18px;white-space:nowrap}
+.hero{padding:72px 0 56px;background:radial-gradient(900px 400px at 80% -10%,rgba(131,231,187,.14),transparent 60%)}
+.eyebrow{color:var(--gold);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin:0 0 14px}
+h1{font-size:clamp(34px,6vw,60px);line-height:1.08;margin:0 0 18px;letter-spacing:-.02em;max-width:15em}
+h1 em{font-style:normal;color:var(--mint)}
+.lede{font-size:clamp(18px,2.4vw,21px);color:var(--mute);max-width:36em;margin:0 0 30px}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 0}
+.note{font-size:14px;color:var(--mute);margin-top:14px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,4vw,36px);line-height:1.15;margin:0 0 10px;letter-spacing:-.01em}
+.sub{color:var(--mute);max-width:40em;margin:0 0 28px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{margin:0 0 6px;font-size:19px}
+.card p{margin:0;color:var(--mute);font-size:15.5px}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:#101216;background:var(--gold);border-radius:99px;padding:2px 10px;margin-bottom:10px}
+.tag.m{background:var(--mint)}
+.tag.g{background:var(--line);color:var(--cream)}
+.demo a.go{display:inline-block;margin-top:14px;font-weight:700}
+.mock{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:8px}
+.mock .row{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+.mock .row:last-child{border:0}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--mint);margin-top:8px;flex:none}
+.dot.g{background:var(--gold)}
+.mock small{display:block;color:var(--mute)}
+.lab{font-size:12.5px;color:var(--mute);margin:12px 0 0}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--mute);margin:10px 0 0}
+ul.ticks{list-style:none;padding:0;margin:0}
+ul.ticks li{padding:6px 0 6px 28px;position:relative}
+ul.ticks li:before{content:"✓";position:absolute;left:0;color:var(--mint);font-weight:700}
+.final{text-align:center;background:var(--bg2)}
+.final .sub{margin-left:auto;margin-right:auto}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap">
+<a href="#top" aria-label="LaunchRiot home"><img src="logo_full.png" alt="LaunchRiot" width="136" height="36"></a>
+<nav aria-label="Main"><a class="hide-s" href="#what">What it does</a><a href="#demos">Demos</a><a class="hide-s" href="#privacy">Privacy</a><a class="hide-s" href="#faq">FAQ</a></nav>
+</div></header>
+<main id="main">
+<div class="hero" id="top"><div class="wrap">
+<p class="eyebrow">For executives and business owners</p>
+<h1>Know what needs your attention. <em>Handle it from one place.</em></h1>
+<p class="lede">LaunchRiot brings your priority email, calendar and drafted replies into one calm workspace, so you start the day knowing what matters. Nothing is sent unless you approve it.</p>
+<div class="cta-row"><a class="btn" href="https://cliffordlandman-alt.github.io/launchriot-winterhalter-next/">Open the live demo</a><a class="link2" href="#demos">See all demos</a></div>
+<p class="note">Demo workspaces use sample content. No sign-up needed to look around.</p>
+</div></div>
+
+<section id="what"><div class="wrap">
+<h2>What it does today</h2>
+<p class="sub">Built around one idea: fewer tabs, clearer priorities, you stay in control.</p>
+<div class="grid">
+<div class="card"><h3>Priority inbox</h3><p>Important messages are surfaced first, with a built-in reader and a short reason why each one was flagged.</p></div>
+<div class="card"><h3>Gmail connection</h3><p>Connect your Gmail account with Google's standard sign-in. You can disconnect at any time.</p></div>
+<div class="card"><h3>Calendar</h3><p>See today and the week ahead alongside your messages.</p></div>
+<div class="card"><h3>Approval-only drafts</h3><p>Reply drafts are prepared for you to edit. They are never sent automatically.</p></div>
+<div class="card"><h3>WhatsApp, one tap away</h3><p>Open a chat in WhatsApp Web straight from a message. Chats are not read into the dashboard.</p></div>
+<div class="card"><h3>Executive workspace</h3><p>A morning brief, focus mode, decisions, key contacts and meeting preparation in one view.</p></div>
+</div>
+<div class="mock" role="img" aria-label="Illustration of a morning brief with sample items">
+<div class="row"><span class="dot g"></span><div><strong>Reply needed: supplier quote</strong><small>Priority inbox · flagged because you asked a question 2 days ago</small></div></div>
+<div class="row"><span class="dot"></span><div><strong>10:30 Team stand-up</strong><small>Calendar · today</small></div></div>
+<div class="row"><span class="dot"></span><div><strong>Draft ready for your review</strong><small>Approval only · not sent</small></div></div>
+</div>
+<p class="lab">Illustration with sample content, not real data.</p>
+</div></section>
+
+<section id="demos"><div class="wrap">
+<h2>Try a demo</h2>
+<p class="sub">Each demo is a working preview with sample or empty data. Open one and explore.</p>
+<div class="grid demo">
+<div class="card"><span class="tag m">Live</span><h3>Executive workspace preview</h3><p>Morning brief, focus mode, decisions and meeting prep, shown with empty states.</p><a class="go" href="https://cliffordlandman-alt.github.io/launchriot-winterhalter-next/">Open preview →</a></div>
+<div class="card"><span class="tag g">Coming soon</span><h3>Adviser demo</h3><p>A workspace for independent advisers. Being finished now.</p></div>
+<div class="card"><span class="tag m">Live</span><h3>Electrical contractor</h3><p>A sample setup for a trades business.</p><a class="go" href="https://cliffordlandman-alt.github.io/launchriot-electrical-demo/">Open demo →</a></div>
+<div class="card"><span class="tag m">Live</span><h3>Holiday homes</h3><p>A sample setup for a short-let operator.</p><a class="go" href="https://cliffordlandman-alt.github.io/launchriot-holiday-demo/">Open demo →</a></div>
+</div></div></section>
+
+<section id="privacy"><div class="wrap">
+<h2>Private by design</h2>
+<p class="sub">Your communications are yours.</p>
+<ul class="ticks">
+<li>No outside AI provider reads your messages. Prioritising and summaries use fixed rules inside the product.</li>
+<li>Your data is private to you, the owner of the workspace.</li>
+<li>Drafts are approval-only. Nothing is sent, forwarded or deleted without your say-so.</li>
+<li>You can disconnect an account whenever you choose.</li>
+</ul>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<h2>Honest answers</h2>
+<details><summary>Is there AI chat?</summary><p>Not yet. The assistant in the executive preview works from rules and your own data. It is not an open-ended AI chatbot.</p></details>
+<details><summary>Does it work with Outlook?</summary><p>Not yet. Gmail and calendar are supported today.</p></details>
+<details><summary>Does WhatsApp appear inside the dashboard?</summary><p>No. For now, buttons open the chat in WhatsApp Web. Reading WhatsApp inside the dashboard is not available.</p></details>
+<details><summary>Will it send messages for me?</summary><p>Never automatically. Drafts wait for your approval.</p></details>
+<details><summary>What does it cost?</summary><p>We agree scope and cost with you before any work starts. Message us and we will talk it through.</p></details>
+</div></section>
+
+<section class="final"><div class="wrap">
+<h2>See it for yourself</h2>
+<p class="sub">Open the demo, then tell us what your day looks like.</p>
+<a class="btn" href="https://cliffordlandman-alt.github.io/launchriot-winterhalter-next/">Open the live demo</a>
+<p class="note">Questions? <a href="mailto:hello@launchriot.online">hello@launchriot.online</a> · <a href="https://wa.me/971586444285?text=Hi%20LaunchRiot%2C%20I%27d%20like%20to%20book%20a%20demo.">WhatsApp us</a></p>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 LaunchRiot · Founded by Clifford Landman</span><span>Serving businesses across the UAE and MENA</span></div></footer>
+</body>
+</html>
