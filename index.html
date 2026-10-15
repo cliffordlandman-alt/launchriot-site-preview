@@ -51,9 +51,23 @@ h2{font-size:clamp(26px,4vw,36px);line-height:1.15;margin:0 0 10px;letter-spacin
 .dot.g{background:var(--gold)}
 .mock small{display:block;color:var(--mute)}
 .lab{font-size:12.5px;color:var(--mute);margin:12px 0 0}
-details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px}
-summary{cursor:pointer;font-weight:600}
-details p{color:var(--mute);margin:10px 0 0}
+#faq .wrap>details{display:block;width:100%}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;transition:border-color .2s,background .2s}
+details:hover{border-color:#3d4452;background:#20252d}
+details[open]{border-color:var(--mint);background:var(--bg2)}
+summary{cursor:pointer;font-weight:600;font-size:17px;line-height:1.4;color:var(--cream);list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;min-height:56px;border-radius:14px;-webkit-tap-highlight-color:transparent}
+summary::-webkit-details-marker{display:none}
+summary::marker{content:"";display:none}
+summary:hover{color:var(--mint)}
+summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:
+linear-gradient(var(--mint),var(--mint)) center/12px 2px no-repeat,
+linear-gradient(var(--mint),var(--mint)) center/2px 12px no-repeat;transition:transform .25s ease,background-size .25s ease,border-color .2s}
+summary:hover::after{border-color:var(--mint)}
+details[open] summary::after{transform:rotate(180deg);background-size:12px 2px,2px 0;border-color:var(--mint)}
+details p{color:#d3d6db;font-size:16px;line-height:1.7;margin:0;padding:0 64px 20px 20px;max-width:none;border-top:0}
+@media(max-width:640px){summary{padding:16px;font-size:16px}details p{padding:0 16px 18px}}
+@media(prefers-reduced-motion:reduce){summary::after,details{transition:none}}
 ul.ticks{list-style:none;padding:0;margin:0}
 ul.ticks li{padding:6px 0 6px 28px;position:relative}
 ul.ticks li:before{content:"✓";position:absolute;left:0;color:var(--mint);font-weight:700}
